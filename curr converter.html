@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>
+            Currency Converter
+        </title>
+        <style>
+            .i1{
+		    width : 20px;
+			height : 15px;
+			border: 1px white solid;
+			}
+
+            .i1:hover
+			{background-color:white;
+			}
+
+            input[type="text"]{
+			border-radius: 10px;
+			background-color: black;
+			color: white; 
+			font-size: large; 
+			border: 1px white solid;
+			text-align: center;
+			}
+
+            table{
+			border: 1px black solid;
+			background-color: black;
+			color: white; 
+			padding: 4px;
+			}
+
+            tr{
+			background-color:
+			rgb(9, 1, 36);
+			}
+
+            input[type="button"]{ 
+            border-radius: 10px;
+            width: 100%;
+            background-color: red;
+            padding: 14px 28px;
+            font-size: 16px;
+            text-align: center;
+            font-weight: bolder;
+            color: white;
+			}
+            input[type="button"]:hover{
+			background-color: #cf0505;
+			}
+
+        </style>
+        <script>
+            function clr(){
+            document.getElementById('display1').value="";
+            document.getElementById('display2').value="";
+            document.getElementById('display3').value="";
+            document.getElementById('display4').value="";
+            document.getElementById('display5').value="";
+            }
+
+            function convert(val){
+            var x= document.getElementById('display2').value;
+            if(val==1){
+                document.getElementById('display1').value=x*75.08;
+            }
+            else if(val==2){
+                document.getElementById('display3').value=x*0.89;
+            }
+            else if(val==3){
+                document.getElementById('display4').value=x*115.55;
+            }
+            else{
+                document.getElementById('display5').value=x*0.75;
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <br><br><br>
+        <center><table cellspacing="20px">
+            <tr>
+                <th><h2>CURRENCY CONVERTER</h2></th>
+            </tr>
+            <tr>
+                <td><img class="i1" src="E:\CWS/China.png" onclick="convert('1')">  ¥  <input type="text" size="25" id="display1"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td><img class="i1" src="E:\CWS/India.png" > ₹ <input type="text" size="25" placeholder="Enter the value" id="display2"></td> 
+            </tr>
+            <tr></tr>
+            <tr>
+                <td><img class="i1" src="E:\CWS/Spain.png" onclick="convert('2')"> € <input type="text" size="25" id="display3"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td><img class="i1" src="E:\CWS/UK.png" onclick="convert('3')"> £ <input type="text" size="25" id="display4"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td><img class="i1" src="E:\CWS/US.png" onclick="convert('4')"> $ <input type="text" size="25" id="display5"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td><input type="button" value="CLEAR" onclick="clr()"> </td>
+            </tr>
+        </table></center>
+    </body>
+</html>
